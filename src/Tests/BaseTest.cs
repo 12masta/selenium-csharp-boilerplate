@@ -31,7 +31,10 @@ namespace Tests
         [TearDown]
         public void TearDown()
         {
-            driverWrapper.Dispose();
+            if (driverWrapper != null)
+            {
+                driverWrapper.Dispose();                
+            }
         }
     }
 }
